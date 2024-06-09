@@ -2164,6 +2164,17 @@ files = [
 ]
 
 [[package]]
+name = "tqdn"
+version = "0.2.1"
+description = "A small example package"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "tqdn-0.2.1-py3-none-any.whl", hash = "sha256:8eb06e3e0e08e486253b3ecb3062d890f4a917d2e19d3d829587c1fb0ed1e6b5"},
+    {file = "tqdn-0.2.1.tar.gz", hash = "sha256:08b7dbb2b12e73ff1177596fb41fa211c42e9392565d632e20a0edba39dc6146"},
+]
+
+[[package]]
 name = "traitlets"
 version = "5.14.3"
 description = "Traitlets Python configuration system"
@@ -2313,4 +2324,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9"
-content-hash = "1dc99029cc4ebe0f9533d1517ffff07ca30f2eaa1a16f0ab9df697e286ddf9a3"
+content-hash = "c166b1089703f0725b64aff05a4f7a9231ecc94561a7870dcf7938fbabfe6ec1"
