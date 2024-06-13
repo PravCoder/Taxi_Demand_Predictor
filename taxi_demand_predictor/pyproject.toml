@@ -17,6 +17,7 @@ tqdn = "^0.2.1"
 plotly = "^5.22.0"
 numpy = "^1.26.4"
 scikit-learn = "^1.5.0"
+xgboost = "^2.0.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
