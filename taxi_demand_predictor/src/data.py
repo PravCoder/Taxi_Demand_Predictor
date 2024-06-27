@@ -32,7 +32,7 @@ def validate_raw_data(rides, year, month):  # rides-dataframe, year/month intege
 
     return rides
 
-# GIVEN A YEAR AND LIST OF MONTHS DOWNLOADS DATA FOR THOS EMONTHS AND VALIDATES IT
+# GIVEN A YEAR AND LIST OF MONTHS DOWNLOADS DATA FOR THOSE MONTHS AND VALIDATES IT
 def load_raw_data(year, months=None):
     rides = pd.DataFrame()   # initlize empty df
     # semantic checks
@@ -44,12 +44,12 @@ def load_raw_data(year, months=None):
     print(months)
     # iterate each month-integer in month-list
     for month in months:
-        # construct string of path for cur-month-year raw-data-file
+        # construct string of path for cur-month-year raw-data-file, to see if a file of raw data for this specific year and month exists in raw-data-dir
         local_file = RAW_DATA_DIR / f'rides_{year}-{month:02d}.parquet'
         if not local_file.exists():  # if the file doesn't exist
-            try:        # call function passing year/month which pulls the dat for year/month from website and stores it in raw-directory
+            try:        # call function passing year/month which pulls the data for year/month from website and stores it in raw-directory
                 print(f'Downloading file {year}-{month:02d}')
-                download_one_file_of_raw_data(year, month)
+                download_one_file_of_raw_data(year, month)  # if that file doesnt exist for that month/year in raw-data-dir, download raw-data from website and store it in raw-data-dir
             except:    # else file is not there
                 print(f"{year}-{month:02d} file is not available")
                 continue

@@ -18,7 +18,6 @@ def average_rides_last_4_weeks(X):  # given X-dataframe-train-data
     return X
 
 
-
 # create custom Transformer-class that inherits from these two scikit learn classes
 class TemporalFeaturesEngineer(BaseEstimator, TransformerMixin):
 
