@@ -19,6 +19,7 @@ numpy = "^1.26.4"
 scikit-learn = "^1.5.0"
 xgboost = "^2.0.3"
 optuna = "^3.6.1"
+python-dotenv = "^1.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
