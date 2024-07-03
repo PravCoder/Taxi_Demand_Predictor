@@ -126,6 +126,7 @@ def transform_raw_data_into_ts_data(rides):
      
 
 
+
 # GIVEN TS-DATA LOOPS THROUGH ALLL LOCATION-IDS AND CREATES EXAMPLES FEAUTRES AND TARGETS, look at video to see how features/targets are sliced
 def transform_ts_data_into_features_and_target(ts_data, input_seq_len, step_size):
 
