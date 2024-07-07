@@ -75,10 +75,11 @@ def load_batch_of_features_from_store(current_date):
 
     features["pickup_hour"] = current_date
     features["pickup_location_id"] = location_ids
+    return features
 
 def load_model_from_registry():
     import joblib
-    import pathlib from Path
+    from pathlib import Path
 
     project = get_hopsworks_project()
     model_registry = project.get_model_registry()
