@@ -14,7 +14,8 @@ import pydeck as pdk
 from src.inference import (
     load_predictions_from_store,
     load_batch_of_features_from_store,
-    load_model_from_registry
+    load_model_from_registry,
+    get_model_predictions
 )
 from src.paths import DATA_DIR
 from src.plot import plot_one_sample
@@ -66,3 +67,9 @@ with st.spinner(text="Loading ML model from model registry"):
     model = load_model_from_registry()  
     st.sidebar.write("ML model was loaded from the registry") # update UI
     progress_bar.progress(3/N_STEPS)
+
+with st.spinner(text="Computing Model predictions"):
+    # given model-obj and features-df calls predict on model passing features
+    results = get_model_predictions(model, features)
+    st.sidebar.write("Model predictions arrived") # update UI
+    progress_bar.progress(4/N_STEPS)
