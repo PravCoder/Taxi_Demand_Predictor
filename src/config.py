@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from src.paths import PARENT_DIR
+from paths import PARENT_DIR
 
 
 load_dotenv(PARENT_DIR / ".env")

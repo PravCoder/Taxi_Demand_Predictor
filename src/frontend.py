@@ -1,3 +1,8 @@
+import sys
+import os
+import importlib
+script_dir = os.getcwd()  
+sys.path.append(os.path.abspath(os.path.join(script_dir, '..')))
 
 # BREAK
 import zipfile 
@@ -11,14 +16,14 @@ import streamlit as st
 import geopandas as gpd
 import pydeck as pdk
 # from inference.py import 2 funcs
-from src.inference import (
-    load_predictions_from_store,
+from inference import (
+    # load_predictions_from_store,
     load_batch_of_features_from_store,
     load_model_from_registry,
     get_model_predictions
 )
-from src.paths import DATA_DIR
-from src.plot import plot_one_sample
+from paths import DATA_DIR
+from plot import plot_one_sample
 import pytz
 
 
@@ -40,7 +45,7 @@ def load_shape_data_file():
     response = requests.get(URL)  # send get-request to url
     path = DATA_DIR / f"taxi_zones.zip"  # path is the data directory adn zip-file
     # if response is successful, open the path and write the content of the response which is the data into the file specififed in the path
-    if response.status_code == 200
+    if response.status_code == 200:
         open(path, "wb").write(response.content)
     else:
         raise Exception(f"{URL} is not avaible")

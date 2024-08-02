@@ -1,11 +1,16 @@
+import sys
+import os
+import importlib
+script_dir = os.getcwd()  
+sys.path.append(os.path.abspath(os.path.join(script_dir, '..')))
+# IMPORTS
 from datetime import datetime, timedelta
-
 import hopsworks
 from hsfs.feature_store import FeatureStore
 import pandas as pd
 import numpy as np
 
-import src.config as config
+import config as config
 
 def get_hopsworks_project():
     # login to hopsworks using project name/api key
